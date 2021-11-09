@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LYNKS Laboratories</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="description"
+        content="Побутова хімія для щоденного прибирання і професійні засоби для потреб бізнесу, клінінгових компаній, автокосметикиа, супутні товари для побуту українського виробництва.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add site Favicon -->
+    <link rel="icon" href="./assets/images/favicon/favicon (1).ico">
+    <!-- All CSS is here
+	============================================ -->
+    <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/vendor/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="./assets/css/vendor/themify-icons.css" />
+    <link rel="stylesheet" href="./assets/css/vendor/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/aos.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/magnific-popup.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/jquery-ui.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/select2.min.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/easyzoom.css" />
+    <link rel="stylesheet" href="./assets/css/plugins/slinky.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+
+
+
+<body>
+    <div class="main-wrapper main-wrapper-2">
+        <header class="header-area header-responsive-padding header-height-1">
+            <div class="header-top d-none d-lg-block bg-gray">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-6">
+                            <div class="welcome-text">
+                                <p>м.Миколаїв, проспект Центральний, 25</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-6">
+                            <div class="language-currency-wrap">
+                                <div class="currency-wrap border-style">
+                                    <a class="currency-active"
+                                        href="mailto:lynksclean@gmail.com">lynksclean@gmail.com</a>
+                                </div>
+                                <div class="language-wrap">
+                                    <a href="tel:+380508674219">+380508674219</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom sticky-bar">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-6 col-6">
+                            <div class="logo">
+                                <a href="index.html"><img src="./assets/images/logo/logo.png" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block d-flex justify-content-center">
+                            <div class="main-menu text-center">
+                                <nav>
+                                    <ul>
+                                        <li><a href="index.html#showCartProd">КАТАЛОГ</a>
+                                            <!-- <ul class="mega-menu-style mega-menu-mrg-1">
+                                                <li>
+                                                    <ul>
+                                                        <li>
+                                                            <a class="dropdown-title" href="index.html#cleaning">Вся продукція</a>
+                                                            <ul>
+                                                                <li><a href="index.html#cleaning">Засоби для щоденного
+                                                                        прибирання</a></li>
+                                                                <li><a href="index.html#washing">Засоби для прання</a></li>
+                                                                <li><a href="index.html#related">Супутні товари</a></li>
+                                                                <li><a href="index.html#carWash">Професійна хімія для
+                                                                        автомийок</a></li>
+                                                                <li><a href="index.html#antifreeze">Охолоджуючі рідини для авто</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul> -->
+                                        </li>
+                                        <li><a href="about-us.html">ПРО НАС</a></li>
+                                        <li><a href="contact-us.html">КОНТАКТИ</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-6">
+                            <div class="header-action-wrap">
+                                <div class="header-action-style header-action-cart">
+                                    <a onclick="calcCartPrice()" class="cart-active" href="#"><i class="pe-7s-shopbag"></i>
+                                        <span class="product-count bg-black">0</span>
+                                    </a>
+                                </div>
+                                <div class="header-action-style d-block d-lg-none">
+                                    <a class="mobile-menu-active-button" href="#"><i class="pe-7s-menu"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- корзина -->
+        <div class="sidebar-cart-active">
+            <div class="sidebar-cart-all">
+                <a class="cart-close" ><i class="pe-7s-close"></i></a>
+                <div class="cart-content">
+                    <h3>Замовлення</h3>
+                    <div data-cart-empty class="alert alert-secondary" role="alert">Корзина порожня</div>
+                    <ul class="cart-wrapper">
+                        
+                    </ul>
+                    <div class="cart-total" id="cartDtlSumm">
+                        <h4>До сплати: <span class="total-price" > грн. </span><span class="total-summ">0</span></h4>
+                    </div>
+                    <div class="checkout-btn btn-hover" id="order-form">
+                        <a class="theme-color" href="checkout.html">Оформити замовлення</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb-area bg-gray-4 breadcrumb-padding-1">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <h2 data-aos="fade-up" data-aos-delay="200">Про Нас</h2>
+                    <ul data-aos="fade-up" data-aos-delay="400">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><i class="ti-angle-right"></i></li>
+                        <li>Про Нас</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="breadcrumb-img-1" data-aos="fade-right" data-aos-delay="200">
+                <img src="./assets/images/banner/history.png">
+            </div>
+            <div class="breadcrumb-img-2" data-aos="fade-left" data-aos-delay="200">
+                <img src="./assets/images/banner/клиенты.png">
+            </div>
+        </div>
+        <div class="about-us-area pt-100 pb-100">
+            <div class="container">
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-lg-6">
+                        <div class="about-content text-center">
+
+                            <h1 data-aos="fade-up" data-aos-delay="300">Виробництво</h1>
+                            <p data-aos="fade-up" data-aos-delay="400">Завод ТОВ «Лінкс лабораторії» – сучасний виробничий майданчик, оснащений напівавтоматизованими високотехнологічними лініями провідних українських та європейських виробників (Stanco Group, завод пакувального обладнання Баленко). Запуск заводу відбувся у грудні 2008 року.
+
+                                Підприємство спеціалізується на виготовленні побутової хімії, авто хімії та автокосметики під власною торговою маркою EXOL www.exol.com.ua, а також приватних торгових марок на умовах контрактного виробництва. Сучасне обладнання дозволяє виготовляти широкий асортиментний ряд. Середньодобова потужність виробничого підрозділу становить 20 тонн на добу.
+                                
+                                Розроблений асортимент автохімії налічує понад 100 найменування омивачів скла, охолоджуючих рідин, автокосметики, професійних засобів для авто мийок та супутніх товарів. Побутова хімія представлена засобами для щоденного прибирання та професійними миючими засобами, всього 78 позицій.
+                                
+                                Команда інженерів-технологів невпинно працює над покращенням існуючих продуктів та розробкою нових із унікальними властивостями для задоволення потреб клієнтів. Крім того, Компанія постійно розвиває спектр послуг і поруч із продуктами масового вжитку реалізовує спеціалізовані товари для побуту та бізнесу.
+                                
+                                </p>
+                            <p class="mrg-inc" data-aos="fade-up" data-aos-delay="500">Гарантом якості продукції ТОВ «Лінкс лабораторії» є використання сировини від  світових лідерів промислових хімікатів: Clariant International (Швейцарія), Brenntag (Німеччина), AKZO NOBEL (Нідерланди), BASF (Німеччина). Крім того, для виготовлення основного складника спиртовмісних продуктів, Компанія запустила нову виробничу лінію на Воютицькому спиртзаводі, де має змогу ретельно контролювати якість концентрату для омивачів скла.
+                                
+                                У жовтні 2017 року ТОВ «Лінкс лабораторії» розпочало роботу по впровадженню та сертифікації заводу згідно міжнародної системи менеджменту якості ISO 9001:2015.</p>
+                            <div class="btn-style-3 btn-hover" data-aos="fade-up" data-aos-delay="600">
+                                <a class="btn border-radius-none" href="index.html">До покупок</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-img" data-aos="fade-up" data-aos-delay="400">
+                            <img src="./assets/images/banner/584eda1d01096.jpg" alt="">
+                        </div>
+                        <div class="about-img" data-aos="fade-up" data-aos-delay="400" style="margin-top: 20px;">
+                            <img src="./assets/images/banner/gallery6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-area">
+            <div class="bg-gray-2">
+                <div class="container">
+                    <div class="footer-top pt-80 pb-35">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-about mb-40">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="./assets/images/logo/logo.png" alt="logo"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-widget-margin-1 footer-list mb-40">
+                                    <ul>
+                                        <li><span>Адреса: </span>м.Миколаїв, проспект Центральний, 25</li>
+                                        <li><span>Телефон:</span><a href="tel:+380508674219">+380508674219</a></li>
+                                        <li><span>Email: </span><a href="mailto:lynksclean@gmail.com"> lynksclean@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-widget-margin-2 footer-address mb-40">
+                                    <div class="open-time">
+                                        <p>Вівторок - неділя : <span>8:00</span> - <span>18:00</span></p>
+                                        <p>Понеділок : вихідний</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-3">
+                <div class="container">
+                    <div class="footer-bottom copyright text-center bg-gray-3">
+                        <p>©2021</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Mobile Menu start -->
+        <div class="off-canvas-active">
+            <a class="off-canvas-close"><i class=" ti-close "></i></a>
+            <div class="off-canvas-wrap">
+                <div class="welcome-text off-canvas-margin-padding">
+                    <p>м.Миколаїв, проспект Центральний, 25</p>
+                </div>
+                <div class="mobile-menu-wrap off-canvas-margin-padding-2">
+                    <div id="mobile-menu" class="slinky-mobile-menu text-left">
+                        <ul>
+                            <li><a href="index.html#cleaning">КАТАЛОГ </a></li>
+                            <li><a href="about-us.html">ПРО НАС</a></li>
+                            <li><a href="contact-us.html">КОНТАКТИ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="language-currency-wrap language-currency-wrap-modify">
+                    <div class="currency-wrap border-style">
+                        <a href="mailto:lynksclean@gmail.com">lynksclean@gmail.com</a>
+                    </div>
+                    <div class="language-wrap">
+                        <a href="tel:+380508674219">+380508674219</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- All JS is here -->
+    <script src="./assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="./assets/js/vendor/popper.min.js"></script>
+    <script src="./assets/js/vendor/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins/wow.js"></script>
+    <script src="./assets/js/plugins/scrollup.js"></script>
+    <script src="./assets/js/plugins/aos.js"></script>
+    <script src="./assets/js/plugins/magnific-popup.js"></script>
+    <script src="./assets/js/plugins/jquery.syotimer.min.js"></script>
+    <script src="./assets/js/plugins/swiper.min.js"></script>
+    <script src="./assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/js/plugins/isotope.pkgd.min.js"></script>
+    <script src="./assets/js/plugins/jquery-ui.js"></script>
+    <script src="./assets/js/plugins/jquery-ui-touch-punch.js"></script>
+    <script src="./assets/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/plugins/waypoints.min.js"></script>
+    <script src="./assets/js/plugins/counterup.min.js"></script>
+    <script src="./assets/js/plugins/select2.min.js"></script>
+    <script src="./assets/js/plugins/easyzoom.js"></script>
+    <script src="./assets/js/plugins/slinky.min.js"></script>
+    <script src="./assets/js/plugins/ajax-mail.js"></script>
+    <script src="./assets/js/toogleCartStatus.js"></script>
+    <script src="./assets/js/calcCartPrice.js"></script>
+    <script src="./assets/js/basket.js"></script>
+    <script src="./assets/js/products.json"></script>
+    <script src="./assets/js/cart-prod.js"></script>
+    <script src="./assets/js/counter.js"></script>
+    <script src="./assets/js/product-details.js"></script>
+    <script src="./assets/js/basket-cnt.js"></script>
+    
+    <!-- Main JS -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

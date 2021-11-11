@@ -26,4 +26,27 @@ if (event.target.classList.contains('.cart-order .cart-delete')) {
     updateStorage();
     
 }  
-})
+});
+
+jQuery(document).ready(function () {
+    jQuery('form button').click( function() {
+        var form = jQuery(this).closest('form');
+
+        if (form.valid()) {
+            var actUrl = form.attr('action');
+
+            jQuery.ajax({
+                url: actUrl,
+                type: 'post',
+                dataType: 'html',
+                data: form.serialize(),
+                success: function(data) {
+                    form.find('.status').html("Дякуємо за замовлення! Менеджер зв'яжеться з вами найближчим часом.");
+                },
+                error: function() {
+                    form.find('.status').html('Помилка серверу');
+                }
+            });
+        }
+    });
+});

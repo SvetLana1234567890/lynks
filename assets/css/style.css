@@ -7560,7 +7560,7 @@ textarea {
   }
 }
 
-.Place-order input{
+.Place-order button {
   font-weight: 600;
   color: #ffffff;
   background-color: #f5040a;

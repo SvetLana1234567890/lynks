@@ -1,6 +1,55 @@
-<meta charset = "utf-8">
-
 <?php
+$theme = "Заказ LYNKS";
+error_reporting( E_ERROR );
+    if (isset($_POST['surname']))        {$surname         = $_POST['surname'];          if ($surname == '')        {unset($surname);}}
+    if (isset($_POST['name']))           {$name            = $_POST['name'];             if ($name == '')           {unset($name);}}
+    if (isset($_POST['phone']))          {$phone           = $_POST['phone'];            if ($phone == '')          {unset($phone);}}
+    if (isset($_POST['message']))        {$message         = $_POST['message'];          if ($message == '')        {unset($message);}}
+    if (isset($_POST['sab']))            {$sab             = $_POST['sab'];              if ($sab == '')            {unset($sab);}}
+    if (isset($_POST['delivery']))       {$delivery        = $_POST['delivery'];         if ($delivery == '')       {unset($delivery);}}
+    if (isset($_POST['payment_method'])) {$payment_method  = $_POST['payment_method'];   if ($payment_method == '') {unset($payment_method);}}
+
+    
+
+    if (isset($surname)) {
+        $surname = stripcslashes($surname);
+        $surname = htmlspecialchars($surname);
+    }
+    if (isset($name)) {
+        $name = stripcslashes($name);
+        $name = htmlspecialchars($name);
+    }
+    if (isset($phone)) {
+        $phone = stripcslashes($phone);
+        $phone = htmlspecialchars($phone);
+    }
+    if (isset($message)) {
+        $message = stripcslashes($message);
+        $message = htmlspecialchars($message);
+    }
+    if (isset($delivery)) {
+        $delivery = stripcslashes($delivery);
+        $delivery = htmlspecialchars($delivery);
+    }
+    if (isset($payment_method)) {
+        $payment_method = stripcslashes($payment_method);
+        $payment_method = htmlspecialchars($payment_method);
+    }
+
+    $address = "popkova577@gmail.com";
+    $note_text = "Заказ. \r\n Фамилия Имя: $surname $name \r\n Телефон: $phone \r\n Вариант доставки: $delivery \r\n Адрес доставки: $message  \r\n Вариант оплаты: $payment_method";
+
+    if (isset($name) && isset ($sab)) {
+        mail ($address, $theme, $note_text, "Content-type:text/plain; windows-1251");
+        echo "<p>Дякуємо за замовлення! Менеджер зв'яжеться з вами найближчим часом.</p>"
+    }
+
+?>
+
+<!-- // 
+
+
+
     $surname         = $_POST['surname']; 
     $name            = $_POST['name'];
     $phone           = $_POST['phone']; 
@@ -18,52 +67,9 @@
         Адрес доставки: $message";
         mail($to, $subject, $msg, "From: $to");
 
-?>
 
-<!-- // $theme = "Заказ LYNKS";
-// error_reporting( E_ERROR );
-//     if (isset($_POST['surname']))        {$surname         = $_POST['surname'];          if ($surname == '')        {unset($surname);}}
-//     if (isset($_POST['name']))           {$name            = $_POST['name'];             if ($name == '')           {unset($name);}}
-//     if (isset($_POST['phone']))          {$phone           = $_POST['phone'];            if ($phone == '')          {unset($phone);}}
-//     if (isset($_POST['message']))        {$message         = $_POST['message'];          if ($message == '')        {unset($message);}}
-//     if (isset($_POST['sab']))            {$sab             = $_POST['sab'];              if ($sab == '')            {unset($sab);}}
-//     if (isset($_POST['delivery']))       {$delivery        = $_POST['delivery'];         if ($delivery == '')       {unset($delivery);}}
-//     if (isset($_POST['payment_method'])) {$payment_method  = $_POST['payment_method'];   if ($payment_method == '') {unset($payment_method);}}
 
-    
-
-//     if (isset($surname)) {
-//         $surname = stripcslashes($surname);
-//         $surname = htmlspecialchars($surname);
-//     }
-//     if (isset($name)) {
-//         $name = stripcslashes($name);
-//         $name = htmlspecialchars($name);
-//     }
-//     if (isset($phone)) {
-//         $phone = stripcslashes($phone);
-//         $phone = htmlspecialchars($phone);
-//     }
-//     if (isset($message)) {
-//         $message = stripcslashes($message);
-//         $message = htmlspecialchars($message);
-//     }
-//     if (isset($delivery)) {
-//         $delivery = stripcslashes($delivery);
-//         $delivery = htmlspecialchars($delivery);
-//     }
-//     if (isset($payment_method)) {
-//         $payment_method = stripcslashes($payment_method);
-//         $payment_method = htmlspecialchars($payment_method);
-//     }
-
-//     $address = "popkova577@gmail.com";
-//     $note_text = "Заказ. \r\n Фамилия Имя: $surname $name \r\n Телефон: $phone \r\n Вариант доставки: $delivery \r\n Адрес доставки: $message  \r\n Вариант оплаты: $payment_method";
-
-//     if (isset($name) && isset ($sab)) {
-//         mail ($address, $theme, $note_text, "Content-type:text/plain; windows-1251");
-//         echo "<p>Дякуємо за замовлення! Менеджер зв'яжеться з вами найближчим часом.</p>"
-//     }
+        
     // header("Access-Control-Allow-Origin: *");
     // // Only process POST reqeusts.
     // if ($_SERVER["REQUEST_METHOD"] == "POST") {

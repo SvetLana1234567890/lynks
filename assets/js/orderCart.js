@@ -29,10 +29,10 @@ if (event.target.classList.contains('.cart-order .cart-delete')) {
 });
 
 jQuery(document).ready(function () {
-    jQuery('form button').click( function() {
+    jQuery('.send-form').click( function() {
         var form = jQuery(this).closest('form');
 
-        if (form.valid()) {
+        if (form.valid() ) {
             var actUrl = form.attr('action');
 
             jQuery.ajax({
@@ -41,6 +41,7 @@ jQuery(document).ready(function () {
                 dataType: 'html',
                 data: form.serialize(),
                 success: function(data) {
+                    form.html(data);
                     form.find('.status').html("Дякуємо за замовлення! Менеджер зв'яжеться з вами найближчим часом.");
                 },
                 error: function() {

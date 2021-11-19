@@ -152,11 +152,11 @@
         </div>
         <div class="checkout-main-area pb-100 pt-100">
             <div class="container">
-                <div class="customer-zone mb-20">
-                    <p class="status cart-page-title"></p>
+                <div class="mb-20">
+                    <p class="status_cart"></p>
                 </div>
                 <div class="checkout-wrap pt-30">
-                    <form  action="./assets/php/mail.php" method="post" name="f1">
+                    <form  action="#" id="form" class="form_body">
                         <div class="row">
                             <div class="col-lg-7">
                                 <div class="billing-info-wrap">
@@ -164,37 +164,42 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6">
                                             <div class="billing-info mb-20">
-                                                <label>Прізвище <abbr class="required" title="required">*</abbr></label>
-                                                <input type="text" name="surname"/>
+                                                <label for = "surname" class="form_label">Прізвище <abbr class="required" title="required">*</abbr></label>
+                                                <input id = "surname" class="form_input _req" type="text" name="surname"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="billing-info mb-20">
-                                                <label>Ім'я <abbr class="required" title="required">*</abbr></label>
-                                                <input type="text" name="name"/>
+                                                <label for = "name" class="form_label">Ім'я <abbr class="required" title="required">*</abbr></label>
+                                                <input id = "name" class="form_input _req" type="text" name="name"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-12 col-md-12">
                                             <div class="billing-info mb-20">
-                                                <label>Номер телефону <abbr class="required" title="required">*</abbr></label>
-                                                <input type="text" value="+38" name="phone"/>
+                                                <label for = "phone" class="form_label">Номер телефону <abbr class="required" title="required">*</abbr></label>
+                                                <input id = "phone" class="form_input _req _phone" type="text" value="+38" name="phone"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="checkout-account mt-25">
-                                        <input class="checkout-toggle" type="radio" name="delivery" value="Николаев"> 
-                                        <span>Безкоштовна доставка по Миколаєву</span>
+                                        <input class="checkout-toggle" id="delivery1" checked type="radio" name="delivery" value="Николаев"> 
+                                        <label class="checkout-toggle" for="delivery1"> Безкоштовна доставка по Миколаєву</label>
                                     </div>
                                     <div class="checkout-account mt-25">
-                                        <input class="checkout-toggle" type="radio" name="delivery" value="НоваяПочта">
-                                        <span>Нова Пошта - за тарифами перевізника</span>
+                                        <input class="checkout-toggle" id="delivery2" type="radio" name="delivery" value="НоваяПочта">
+                                        <label class="checkout-toggle" for="delivery2">Нова Пошта - за тарифами перевізника</label>
                                     </div>
                                     <div class="checkout-account mt-25">
-                                        <input class="checkout-toggle" type="radio" name="delivery" value="Укрпочта">
-                                        <span>Укрпошта - за тарифами перевізника</span>
+                                        <input class="checkout-toggle" id="delivery3" type="radio" name="delivery" value="Укрпочта">
+                                        <label class="checkout-toggle" for="delivery3">Укрпошта - за тарифами перевізника</label>
                                     </div>
                                     <div class="additional-info-wrap">
-                                        <textarea placeholder="Вкажіть адресу доставки або місто та номер відділення пошти" name="message"></textarea>
+                                        <label for="message"></label>
+                                        <textarea id="message" placeholder="Вкажіть адресу доставки або місто та номер відділення пошти" name="message"></textarea>
+                                    </div>
+                                    <div class="checkout-account mt-25">
+                                        <input id="formAgreement" type="checkbox" name="agreement" class="checkbox_input _req" checked/>
+                                        <label for="formAgreement">Я згоден(-а) з обробкою моїх персональних даних</label>
                                     </div>
                                 </div>
                             </div>
@@ -230,7 +235,7 @@
                                         </div>
                                     </div>
                                     <div class="Place-order btn-hover">
-                                        <button type="button" class = "send-form" name = "sab">Придбати</button>
+                                        <button type="submit" class = "send-form" name = "sab">Придбати</button>
                                     </div>
                                 </div>
                             </div>
@@ -334,6 +339,8 @@
     <script src="./assets/js/calcCartPrice.js"></script>
     <script src="./assets/js/basket.js"></script>
     <script src="./assets/js/products.json"></script>
+    <script src="./assets/js/form.js"></script>
+
     <!-- <script src="./assets/js/cart-prod.js"></script> -->
     <script src="./assets/js/counter.js"></script>
     <script src="./assets/js/product-details.js"></script>

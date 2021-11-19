@@ -7560,12 +7560,6 @@ textarea {
   }
 }
 
-.Place-order button {
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #f5040a;
-  padding: 20px 37px;
-}
 /*-------- Sidebar style ---------*/
 .sidebar-widget.sidebar-widget-border {
   border-bottom: 1px solid #b7b7b7;
@@ -10349,7 +10343,6 @@ textarea {
 .billing-info-wrap .checkout-account input {
   border: 1px solid #9fa0a2;
   display: inline-block;
-  float: left;
   height: 15px;
   width: 15px;
   position: relative;
@@ -10640,7 +10633,8 @@ textarea {
   }
 }
 
-.your-order-area .Place-order a {
+.your-order-area .Place-order button {
+  border: hidden;
   background-color: #f5040a;
   display: block;
   cursor: pointer;
@@ -10676,4 +10670,8 @@ top: 3px;
 
 .cart-order .cart-item {
   display: flex;
+}
+
+._error input{
+  box-shadow: 0 0 4px red;
 }

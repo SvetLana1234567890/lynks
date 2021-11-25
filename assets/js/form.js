@@ -1,5 +1,5 @@
 "use strict"
-
+// Отправка формы на почту
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('form');
     form.addEventListener('submit', formSend);
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.status_cart').style.color = "white";
         }
     }
-
+// Проверка заполнения обязательных полей
     function formValidate(form) {
         let error = 0;
         let formReq = document.querySelectorAll('._req');

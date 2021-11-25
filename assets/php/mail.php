@@ -46,15 +46,16 @@
 
 ?> -->
 
-<!-- // 
-
+<?php
 
 
     $surname         = $_POST['surname']; 
     $name            = $_POST['name'];
     $phone           = $_POST['phone']; 
+    $delivery        = $_POST['delivery'];
     $message         = $_POST['message']; 
-
+    $payment_method  = $_POST['payment_method'];
+    
     $to = "popkova577@gmail.com";
     $date = date ("d.m.Y");
     $time = date ("h:i");
@@ -64,10 +65,13 @@
         Заказ. /n 
         Фамилия Имя: $surname $name /n 
         Телефон: $phone /n 
-        Адрес доставки: $message";
+        Вариант доставки: $delivery /n 
+        Адрес доставки: $message /n 
+        Вариант оплаты: $payment_method";
+        
         mail($to, $subject, $msg, "From: $to");
 
-
+echo "<p>Дякуємо за замовлення! Менеджер зв'яжеться з вами найближчим часом.</p>";
 
         
     // header("Access-Control-Allow-Origin: *");
@@ -122,5 +126,3 @@
     //     http_response_code(403);
     //     echo "There was a problem with your submission, please try again.";
     // }
- -->
-

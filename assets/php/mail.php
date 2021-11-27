@@ -55,23 +55,29 @@
     $delivery        = $_POST['delivery'];
     $message         = $_POST['message']; 
     $payment_method  = $_POST['payment_method'];
-    
+    $count            = count($_POST['product_id']);
+
+    for ($i=0; $i < $count; $i++){
+        $shops = $i." ".$_POST['product_id'][$i]." ".$_POST['product_name'][$i]." ".$_POST['product_counter'][$i]."<br>";
+    }
+
     $to = "popkova577@gmail.com";
     $date = date ("d.m.Y");
     $time = date ("h:i");
     $subject = "Заказ LYNKS";
 
     $msg = "
-        Заказ. /n 
         Фамилия Имя: $surname $name /n 
         Телефон: $phone /n 
         Вариант доставки: $delivery /n 
         Адрес доставки: $message /n 
-        Вариант оплаты: $payment_method";
+        Вариант оплаты: $payment_method 
+        Количество товаров: $count /n 
+        Заказ: $shops";
         
-        mail($to, $subject, $msg, "From: $to");
+    mail($to, $subject, $msg, "From: $to");
 
-echo "<p>Дякуємо за замовлення! Менеджер зв'яжеться з вами найближчим часом.</p>";
+    echo "<p>Дякуємо за замовлення! Менеджер зв'яжеться з вами найближчим часом.</p>";
 
         
     // header("Access-Control-Allow-Origin: *");

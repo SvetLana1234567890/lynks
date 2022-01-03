@@ -1,5 +1,6 @@
+// вывод списка товаров в форме заказа
 document.querySelector('.cart-order').innerHTML = localStorage.getItem('products');
-
+// пересчет суммы товаров в форме заказа
 function calcOrderCart() {
     const cartItems = document.querySelectorAll('.cart-order .cart-item'); 
     const totalOrderSumm = document.querySelector('.total-order-summ');
@@ -7,9 +8,9 @@ function calcOrderCart() {
 
     cartItems.forEach(function(item) {
 
-        const amounAllOrder = item.querySelector('.cart-order .items-curret');
+        const amounAllOrder = item.querySelector('.cart-order .prodItem');
         const priceAllOrder = item.querySelector('.cart-order .prodPrice');
-        const currentPriceOrder = parseInt(amounAllOrder.innerHTML) * parseInt(priceAllOrder.innerHTML);
+        const currentPriceOrder = amounAllOrder.value * parseInt(priceAllOrder.innerHTML);
         totalPriceOrder += currentPriceOrder;
     })
     totalOrderSumm.innerText = totalPriceOrder + 'грн.';

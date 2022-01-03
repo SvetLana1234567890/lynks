@@ -364,19 +364,6 @@
         $('.select-two-active').select2()
     });
     
-    /*--- checkout toggle function ----*/
-    $('.checkout-click1').on('click', function(e) {
-        e.preventDefault();
-        $('.checkout-login-info').slideToggle(900);
-    });
-    
-    
-    /*--- checkout toggle function ----*/
-    $('.checkout-click3').on('click', function(e) {
-        e.preventDefault();
-        $('.checkout-login-info3').slideToggle(1000);
-    });
-    
     /*-------------------------
     Create an account toggle
     --------------------------*/

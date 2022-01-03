@@ -347,7 +347,7 @@ function showProducts() {
         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                 <div class="product-wrap mb-35" data-aos="fade-up" data-id="${product.id}">
                                     <div class="product-img img-zoom mb-25">
-                                        <a href="#exampleModal"  data-bs-target="#exampleModal" data-bs-toggle="modal">
+                                        <a href="#exampleModal"  data-bs-toggle="modal">
                                             <img src="${product.image}" alt="${product.description}" class="prod-img" data-bs-toggle>
                                         </a>
                                         <div class="product-action-2-wrap">

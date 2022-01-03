@@ -10108,162 +10108,6 @@ textarea {
   font-size: 18px;
 }
 
-.checkout-login-info {
-  margin: 20px 0 0;
-  display: none;
-}
-
-.checkout-login-info p {
-  margin: 0 0 12px;
-  color: #6d6d6d;
-}
-
-.checkout-login-info form {
-  display: block;
-  overflow: hidden;
-}
-
-.checkout-login-info form .sin-checkout-login {
-  margin-bottom: 30px;
-}
-
-.checkout-login-info form .sin-checkout-login label {
-  font-size: 14px;
-  text-transform: capitalize;
-  margin: 0 0 5px;
-}
-
-.checkout-login-info form .sin-checkout-login label span {
-  color: red;
-}
-
-.checkout-login-info form .sin-checkout-login input {
-  border: 1px solid #e8e8e8;
-  height: 50px;
-  background-color: transparent;
-  width: 100%;
-  padding: 2px 20px;
-}
-
-.checkout-login-info form .sin-checkout-login input:focus {
-  border: 1px solid #343538;
-}
-
-.checkout-login-info form .button-remember-wrap {
-  display: block;
-  overflow: hidden;
-}
-
-.checkout-login-info form .button-remember-wrap button {
-  border: 1px solid #aaa;
-  font-size: 13px;
-  padding: 10px 30px 9px;
-  display: inline-block;
-  float: left;
-  margin-right: 20px;
-  text-transform: uppercase;
-}
-
-.checkout-login-info form .button-remember-wrap button:hover {
-  background-color: #f5040a;
-  color: #fff;
-  border: 1px solid #f5040a;
-}
-
-.checkout-login-info form .button-remember-wrap .checkout-login-toggle-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 8px 0 0;
-}
-
-.checkout-login-info form .button-remember-wrap .checkout-login-toggle-btn input {
-  height: 15px;
-  margin: 0;
-  position: relative;
-  top: 5px;
-  width: 17px;
-}
-
-.checkout-login-info form .button-remember-wrap .checkout-login-toggle-btn label {
-  width: 100%;
-  font-size: 15px;
-  margin: 0 0 0 5px;
-}
-
-.checkout-login-info form .lost-password {
-  margin: 20px 0 11px;
-}
-
-.checkout-login-info form .lost-password a {
-  font-size: 15px;
-}
-
-.checkout-login-info2 {
-  display: none;
-  margin: 20px 0 0;
-}
-
-.checkout-login-info2 ul li {
-  display: inline-block;
-}
-
-.checkout-login-info2 ul li a {
-  color: #8a8a8a;
-  font-size: 12px;
-}
-
-.checkout-login-info2 ul li a:hover {
-  color: #f5040a;
-}
-
-.checkout-login-info3 {
-  display: none;
-  margin-top: 20px;
-}
-
-.checkout-login-info3 form input[type="text"] {
-  border: 1px solid #e8e8e8;
-  height: 50px;
-  background-color: transparent;
-  width: 48%;
-  font-size: 14px;
-  padding: 0 20px;
-}
-
-.checkout-login-info3 form input[type="text"]:focus {
-  border: 1px solid #1f2226;
-}
-
-.checkout-login-info3 form input[type="submit"] {
-  background: #1f2226 none repeat scroll 0 0;
-  border: medium none;
-  color: #fff;
-  height: 50px;
-  margin-left: 6px;
-  padding: 5px 30px;
-  font-size: 13px;
-  text-transform: uppercase;
-  width: inherit;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .checkout-login-info3 form input[type="submit"] {
-    padding: 5px 15px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .checkout-login-info3 form input[type="submit"] {
-    padding: 5px 16px;
-  }
-}
-
-.checkout-login-info3 form input[type="submit"]:hover {
-  background-color: #f5040a;
-}
-
 .billing-info-wrap h3 {
   font-size: 22px;
   position: relative;
@@ -10633,7 +10477,7 @@ textarea {
   }
 }
 
-.your-order-area .Place-order button {
+.your-order-area .Place-order button, .modal button {
   border: hidden;
   background-color: #f5040a;
   display: block;
@@ -10653,7 +10497,6 @@ textarea {
 }
 
 .cart-order .items-curret {
-
 top: 3px;
 }
 
@@ -10679,4 +10522,32 @@ top: 3px;
 .status_cart {
   text-align: center;
   padding: 5px;
+}
+
+.prodOrder {
+  visibility: hidden;
+  width: 0.1px;
+}
+
+.product-quality .prodOrder {
+  visibility: visible;
+  width: 100%;
+}
+
+.prodOrder {
+  border: none;
+  padding: 5px;
+  text-align: center;
+
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.modal {
+  background-color: #242424c4;
 }

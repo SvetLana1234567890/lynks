@@ -15,7 +15,7 @@
         $shops.= $i." ".$_POST['product_id'][$i]." ".$_POST['product_name'][$i]." количество: ".$_POST['product_counter'][$i]."\n";
     }
 
-    $to = "popkova577@gmail.com";
+    $to = "lynksclean@gmail.com";
     $date = date ("d.m.Y");
     $time = date ("h:i");
     $subject = "Заказ LYNKS";

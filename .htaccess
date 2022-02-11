@@ -1,0 +1,9 @@
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^lynksclean\.mk\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.lynksclean\.mk\.ua$
+RewriteRule .* https://lynksclean.mk.ua%{REQUEST_URI} [R=301,L]
+
+
+RewriteCond %{HTTPS} =on
+RewriteCond %{HTTP_HOST} ^www\.lynksclean\.mk\.ua$
+RewriteRule .* https://lynksclean.mk.ua%{REQUEST_URI} [R=301,L]
